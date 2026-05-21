@@ -37,7 +37,7 @@ export function MarqueeStrip() {
             </span>
             <span
               className="text-[0.5rem]"
-              style={{ color: "var(--terracotta)", opacity: 0.7 }}
+              style={{ color: "var(--warm)", opacity: 0.7 }}
             >
               ✦
             </span>

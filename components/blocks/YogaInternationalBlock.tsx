@@ -24,7 +24,7 @@ export function YogaInternationalBlock() {
         {/* Header */}
         <FadeIn>
           <div className="text-center mb-14">
-            <div className="flex justify-center mb-5">
+            <div className="flex justify-center mb-10">
               <YogaInternationalLogo />
             </div>
             <h2
@@ -72,7 +72,7 @@ export function YogaInternationalBlock() {
                 <div>
                   <p
                     className="text-[0.69rem] tracking-[0.2em] uppercase mb-2"
-                    style={{ color: "var(--primary)" }}
+                    style={{ color: "var(--warm)" }}
                   >
                     Online Library
                   </p>
@@ -125,7 +125,7 @@ export function YogaInternationalBlock() {
                 />
                 <span
                   className="absolute top-4 left-4 px-3 py-1 text-[0.58rem] tracking-[0.15em] uppercase"
-                  style={{ background: "var(--terracotta)", color: "var(--terracotta-fg)" }}
+                  style={{ background: "var(--warm)", color: "var(--warm-fg)" }}
                 >
                   Featured Course
                 </span>
@@ -145,7 +145,7 @@ export function YogaInternationalBlock() {
                 <div>
                   <p
                     className="text-[0.69rem] tracking-[0.2em] uppercase mb-2"
-                    style={{ color: "var(--primary)" }}
+                    style={{ color: "var(--warm)" }}
                   >
                     Online Course
                   </p>
@@ -176,10 +176,10 @@ export function YogaInternationalBlock() {
                 </ul>
 
                 <div
-                  className="inline-flex items-center justify-center h-11 px-6 rounded-[6px] self-start text-[0.76rem] tracking-[0.09em] uppercase font-bold mt-2 transition-opacity group-hover:opacity-85"
-                  style={{ background: "var(--primary)", color: "var(--primary-foreground)" }}
+                  className="inline-flex items-center gap-2 self-start text-[0.72rem] tracking-[0.12em] uppercase font-bold transition-all group-hover:gap-3"
+                  style={{ color: "var(--primary)" }}
                 >
-                  Start Course
+                  Browse the Course <ArrowRight size={12} />
                 </div>
               </div>
             </a>

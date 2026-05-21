@@ -1,7 +1,8 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
+import { useRef } from "react"
+import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion"
 import { MarqueeStrip } from "@/components/blocks/MarqueeStrip"
 
 const ease = [0.25, 0.1, 0.25, 1] as [number, number, number, number]
@@ -16,6 +17,14 @@ const line = {
 }
 
 export function HeroBlock() {
+  const desktopImgRef = useRef<HTMLDivElement>(null)
+  const { scrollY } = useScroll()
+  const objectX = useTransform(scrollY, [0, 1800], [-650, -850], { clamp: true })
+
+  useMotionValueEvent(objectX, "change", (x) => {
+    const img = desktopImgRef.current?.querySelector("img")
+    if (img) img.style.objectPosition = `${Math.round(x)}px 0px`
+  })
   return (
     <section>
       {/* ── Full-bleed image + left overlay panel ─────────── */}
@@ -38,16 +47,18 @@ export function HeroBlock() {
             sizes="100vw"
             className="object-cover object-bottom lg:hidden"
           />
-          {/* Desktop image */}
-          <Image
-            src="/luke-ketterhagen-hero-wide.webp"
-            alt=""
-            aria-hidden="true"
-            fill
-            sizes="100vw"
-            className="object-cover hidden lg:block"
-            style={{ objectPosition: "-650px 0px" }}
-          />
+          {/* Desktop image — parallax via scroll */}
+          <div ref={desktopImgRef} className="hidden lg:contents">
+            <Image
+              src="/luke-ketterhagen-hero-wide.webp"
+              alt=""
+              aria-hidden="true"
+              fill
+              sizes="100vw"
+              className="object-cover hidden lg:block"
+              style={{ objectPosition: "-650px 0px" }}
+            />
+          </div>
         </motion.div>
 
         {/* Left overlay panel */}
@@ -55,7 +66,9 @@ export function HeroBlock() {
           <motion.div
             className="w-full lg:w-[44%] lg:max-w-[560px] px-8 lg:px-14 py-12 lg:py-16 rounded-sm"
             style={{
-              background: "var(--background)",
+              background: "oklch(1 0 0 / 80%)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
               boxShadow: "0 2px 12px color-mix(in oklch, var(--foreground) 8%, transparent)",
             }}
             initial={{ opacity: 0, x: -40 }}
@@ -90,8 +103,8 @@ export function HeroBlock() {
 
             {/* Subtitle */}
             <motion.p
-              className="text-[0.8rem] tracking-[0.06em] mb-5"
-              style={{ color: "var(--fg-muted)" }}
+              className="text-[1rem] tracking-[0.06em] mb-5"
+              style={{ color: "var(--warm)" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.9, duration: 0.5, ease }}

@@ -67,7 +67,7 @@ export function HeroBlock() {
           <motion.div variants={item} className="flex items-center gap-3">
             <div
               className="w-7 h-px flex-shrink-0"
-              style={{ background: "var(--terracotta)" }}
+              style={{ background: "var(--warm)" }}
             />
             <p
               className="text-[0.65rem] tracking-[0.22em] uppercase"

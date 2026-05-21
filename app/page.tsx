@@ -1,4 +1,5 @@
 import { AnnouncementBar } from "@/components/layout/AnnouncementBar"
+import { ScrollToTop } from "@/components/ui/ScrollToTop"
 import { Nav } from "@/components/layout/Nav"
 import { HeroBlock } from "@/components/blocks/HeroBlock"
 import { RetreatsGrid } from "@/components/blocks/RetreatsGrid"
@@ -24,6 +25,7 @@ export default function HomePage() {
         <YogaInternationalBlock />
       </main>
       <EmailCapture />
+      <ScrollToTop />
     </>
   )
 }

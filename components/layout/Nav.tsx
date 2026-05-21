@@ -2,15 +2,17 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { LukeLogo } from "@/components/ui/LukeLogo"
 
 const links = [
-  { href: "/retreats",   label: "Retreats",   num: "01" },
-  { href: "/trainings",  label: "Trainings",  num: "02" },
-  { href: "/excursions", label: "Excursions", num: "03" },
-  { href: "/corporate",  label: "Corporate",  num: "04" },
-  { href: "/about",      label: "About",      num: "05" },
-  { href: "/contact",    label: "Contact",    num: "06" },
+  { href: "/",           label: "Home",       num: "01" },
+  { href: "/retreats",   label: "Retreats",   num: "02" },
+  { href: "/trainings",  label: "Trainings",  num: "03" },
+  { href: "/excursions", label: "Excursions", num: "04" },
+  { href: "/corporate",  label: "Corporate",  num: "05" },
+  { href: "/about",      label: "About",      num: "06" },
+  { href: "/contact",    label: "Contact",    num: "07" },
 ]
 
 const curtainEase = [0.76, 0, 0.24, 1] as [number, number, number, number]
@@ -30,6 +32,10 @@ const curtain = {
 export function Nav() {
   const [scrolled, setScrolled]     = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const pathname = usePathname()
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href)
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 12)
@@ -78,13 +84,18 @@ export function Nav() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number], delay: 0.2 }}
           >
-            <nav className="flex items-center gap-8" aria-label="Main navigation">
+            <nav className="flex items-center gap-7" aria-label="Main navigation">
               {links.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-[0.75rem] tracking-[0.18em] uppercase font-bold transition-opacity hover:opacity-60"
-                  style={{ color: "var(--foreground)", opacity: 0.75 }}
+                  className="text-[0.8rem] tracking-[0.18em] uppercase font-bold transition-colors"
+                  style={{
+                    color: isActive(link.href) ? "var(--primary)" : "var(--foreground)",
+                    opacity: isActive(link.href) ? 1 : 0.75,
+                  }}
+                  onMouseEnter={e => { if (!isActive(link.href)) e.currentTarget.style.color = "var(--primary)" }}
+                  onMouseLeave={e => { if (!isActive(link.href)) e.currentTarget.style.color = "var(--foreground)" }}
                 >
                   {link.label}
                 </Link>
@@ -92,7 +103,7 @@ export function Nav() {
             </nav>
             <Link
               href="/retreats"
-              className="inline-flex items-center justify-center h-11 px-7 lift-btn rounded-[6px] text-[0.72rem] tracking-[0.18em] uppercase font-bold transition-opacity hover:opacity-85"
+              className="inline-flex items-center justify-center h-9 px-3.5 lift-btn rounded-[6px] text-[0.72rem] tracking-[0.18em] uppercase font-bold transition-opacity hover:opacity-85"
               style={{ background: "var(--primary)", color: "var(--primary-foreground)" }}
             >
               Retreats
@@ -138,7 +149,7 @@ export function Nav() {
             className="md:hidden fixed inset-0 z-30 flex flex-col px-8 pb-12"
             style={{
               background: "var(--bg-dark)",
-              paddingTop: "88px", /* clears the 72px sticky header */
+              paddingTop: "140px",
             }}
           >
             {/* Nav links */}
@@ -191,19 +202,8 @@ export function Nav() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.78, duration: 0.38 }}
-              className="flex items-end justify-between pt-6"
+              className="flex items-end justify-end pt-6"
             >
-              <span
-                className="text-[2rem] leading-none"
-                style={{
-                  fontFamily: "var(--theme-font-script)",
-                  color: "var(--primary-foreground)",
-                  opacity: 0.45,
-                }}
-              >
-                Luke
-              </span>
-
               <Link
                 href="/retreats"
                 onClick={() => setMobileOpen(false)}

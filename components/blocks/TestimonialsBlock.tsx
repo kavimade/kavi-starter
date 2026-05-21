@@ -44,7 +44,7 @@ export function TestimonialsBlock() {
           <div className="text-center mb-16">
             <p
               className="text-[0.69rem] tracking-[0.22em] uppercase mb-3"
-              style={{ color: "var(--primary)" }}
+              style={{ color: "var(--warm)" }}
             >
               Student Stories
             </p>

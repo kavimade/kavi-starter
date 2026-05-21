@@ -49,13 +49,6 @@ export function EmailCapture() {
 
         <div className="relative z-10 max-w-xl mx-auto px-6 lg:px-8 text-center">
         <FadeIn>
-          <p
-            className="text-[0.69rem] tracking-[0.22em] uppercase mb-4"
-            style={{ color: "var(--primary-foreground)", opacity: 0.55 }}
-          >
-            Weekly Wisdom
-          </p>
-
           <h2
             className="font-light leading-[1.08] mb-5"
             style={{
@@ -64,15 +57,14 @@ export function EmailCapture() {
               fontSize: "clamp(2rem, 3.5vw, 2.8rem)",
             }}
           >
-            Practice With Me, <em className="italic">Anywhere</em>
+            Stay <em className="italic">Connected</em>
           </h2>
 
           <p
             className="leading-relaxed mb-10 text-[1.05rem]"
             style={{ color: "var(--primary-foreground)", opacity: 0.65 }}
           >
-            Join students receiving retreat updates, practice guidance,
-            and insights from the Himalayan tradition — straight from Luke.
+            Get email notifications when Luke travels to your town.
           </p>
 
           {status === "success" ? (

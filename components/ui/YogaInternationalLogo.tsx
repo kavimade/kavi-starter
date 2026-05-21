@@ -5,7 +5,7 @@ export function YogaInternationalLogo({ className }: { className?: string }) {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1080 1080"
-        style={{ height: 36, width: 36, flexShrink: 0 }}
+        style={{ height: 52, width: 52, flexShrink: 0 }}
       >
         <defs>
           <circle id="yi-mark-a" cx="540.2" cy="540" r="537.8" />
@@ -32,7 +32,7 @@ export function YogaInternationalLogo({ className }: { className?: string }) {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 2710.6 209.4"
-        style={{ height: 20, width: "auto" }}
+        style={{ height: 28, width: "auto" }}
       >
         <path
           fill="#373f4a"

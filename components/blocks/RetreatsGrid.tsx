@@ -50,7 +50,7 @@ export function RetreatsGrid() {
           <div className="text-center mb-16">
             <p
               className="text-[0.69rem] tracking-[0.22em] uppercase mb-3"
-              style={{ color: "var(--primary)" }}
+              style={{ color: "var(--warm)" }}
             >
               Himalayan Institute · Honesdale, PA
             </p>
@@ -117,7 +117,7 @@ export function RetreatsGrid() {
                 <div className="p-6 flex flex-col gap-3">
                   <div>
                     <h3
-                      className="text-[1.35rem] leading-snug font-normal mb-0.5"
+                      className="text-[1.55rem] leading-snug font-normal mb-0.5"
                       style={{
                         fontFamily: "var(--theme-font-display)",
                         color: "var(--foreground)",
@@ -143,13 +143,13 @@ export function RetreatsGrid() {
                   {/* Date range + link */}
                   <div className="flex items-center justify-between pt-2 mt-auto">
                     <span
-                      className="text-[0.72rem] tracking-[0.04em]"
-                      style={{ color: "var(--fg-muted)" }}
+                      className="text-[0.82rem] tracking-[0.04em]"
+                      style={{ color: "var(--warm)" }}
                     >
                       {retreat.dates}
                     </span>
                     <span
-                      className="flex items-center gap-1 text-[0.68rem] tracking-[0.12em] uppercase font-medium transition-all group-hover:gap-2"
+                      className="flex items-center gap-1 text-[0.8rem] tracking-[0.12em] uppercase font-medium"
                       style={{ color: "var(--primary)" }}
                     >
                       Register <ArrowRight size={11} />
@@ -173,7 +173,7 @@ export function RetreatsGrid() {
               style={{
                 fontFamily: "var(--theme-font-display)",
                 color: "var(--foreground)",
-                fontSize: "clamp(1.15rem, 2.5vw, 1.4rem)",
+                fontSize: "1.6rem",
               }}
             >
               &ldquo;Luke&rsquo;s insight and teaching provided the perfect blend of humor,
@@ -181,8 +181,8 @@ export function RetreatsGrid() {
               still allowing me to deepen my practice.&rdquo;
             </blockquote>
             <cite
-              className="not-italic text-[0.68rem] tracking-[0.18em] uppercase"
-              style={{ color: "var(--fg-muted)" }}
+              className="not-italic text-[0.8rem] tracking-[0.18em] uppercase font-medium"
+              style={{ color: "var(--warm)" }}
             >
               — Karen M. &nbsp;·&nbsp; July 2022 Retreat
             </cite>

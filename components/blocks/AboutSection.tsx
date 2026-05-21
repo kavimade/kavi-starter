@@ -18,11 +18,11 @@ export function AboutSection() {
               />
               <div className="relative aspect-[4/5] rounded-sm overflow-hidden">
                 <Image
-                  src="/luke-ketterhagen-hero.webp"
+                  src="/luke-ketterhagen-about-photo.webp"
                   alt="Luke Ketterhagen"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover object-center"
+                  className="object-cover object-right"
                 />
               </div>
               <div
@@ -37,7 +37,7 @@ export function AboutSection() {
             <div className="flex flex-col gap-6">
               <p
                 className="text-[0.69rem] tracking-[0.22em] uppercase"
-                style={{ color: "var(--primary)" }}
+                style={{ color: "var(--warm)" }}
               >
                 Luke Ketterhagen
               </p>
