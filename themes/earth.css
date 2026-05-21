@@ -1,0 +1,17 @@
+/* ============================================================
+   EARTH THEME — Placeholder
+   Warm terracotta, sage green, and linen cream.
+   Grounded, natural, organic.
+   Applied via: data-theme="earth" on <html>
+   ============================================================ */
+
+[data-theme="earth"] {
+  /* TODO: Define Earth theme tokens */
+  /* Palette direction:
+     --background:   warm linen #f5efe8 range
+     --primary:      terracotta / burnt sienna
+     --secondary:    sage green
+     --accent:       warm gold
+     --bg-dark:      deep forest brown
+  */
+}

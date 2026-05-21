@@ -1,0 +1,17 @@
+/* ============================================================
+   FIRE THEME — Placeholder
+   Deep reds, burnt orange, and bold contrast.
+   Kinetic, passionate, powerful.
+   Applied via: data-theme="fire" on <html>
+   ============================================================ */
+
+[data-theme="fire"] {
+  /* TODO: Define Fire theme tokens */
+  /* Palette direction:
+     --background:   warm off-white or very pale amber
+     --primary:      deep crimson / burnt sienna
+     --secondary:    warm amber / saffron
+     --accent:       gold
+     --bg-dark:      near-black with warm undertone
+  */
+}

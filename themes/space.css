@@ -1,0 +1,18 @@
+/* ============================================================
+   SPACE THEME — Placeholder
+   Near-black backgrounds, soft indigo and violet, glowing accents.
+   Cosmic stillness, infinite depth.
+   Applied via: data-theme="space" on <html>
+   ============================================================ */
+
+[data-theme="space"] {
+  /* TODO: Define Space theme tokens */
+  /* Palette direction:
+     --background:   deep midnight blue / near-black
+     --foreground:   pale silver-white
+     --primary:      soft violet / indigo
+     --secondary:    muted purple
+     --accent:       aurora teal / electric blue
+     --bg-dark:      pure near-black
+  */
+}

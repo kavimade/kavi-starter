@@ -1,0 +1,17 @@
+/* ============================================================
+   AIR THEME — Placeholder
+   Ultra-minimal. Near-white, silver, and whisper grey.
+   Breathable, sharp, airy.
+   Applied via: data-theme="air" on <html>
+   ============================================================ */
+
+[data-theme="air"] {
+  /* TODO: Define Air theme tokens */
+  /* Palette direction:
+     --background:   pure white or near-white
+     --primary:      charcoal / near-black
+     --secondary:    pale silver grey
+     --accent:       cool blush or pale lavender
+     --bg-dark:      soft graphite
+  */
+}
