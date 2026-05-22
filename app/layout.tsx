@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Analytics } from "@vercel/analytics/next"
 import localFont from "next/font/local"
 import { RelaxationToast } from "@/components/ui/RelaxationToast"
 import { Playfair_Display } from "next/font/google"
@@ -99,6 +100,7 @@ export default function RootLayout({
         />
         <div className="flex flex-col flex-1">{children}</div>
         <RelaxationToast />
+        <Analytics />
       </body>
     </html>
   )
