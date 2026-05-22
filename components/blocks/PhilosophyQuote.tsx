@@ -6,7 +6,7 @@ export function PhilosophyQuote() {
     <section className="relative py-36 overflow-hidden">
       {/* Background image */}
       <Image
-        src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1920&q=80"
+        src="/luke-ketterhagen-newsletter-signup.webp"
         alt=""
         aria-hidden="true"
         fill

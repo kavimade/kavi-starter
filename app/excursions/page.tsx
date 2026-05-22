@@ -71,7 +71,7 @@ const excursions = [
       "5-day Ayurveda retreat: yoga, massage, oil therapy",
       "Tea plantations and Kerala rainforest",
     ],
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80",
+    image: "/luke-ketterhagen-excursion-south-india.webp",
     links: [
       { label: "Full Itinerary", href: "https://www.lukeketterhagen.com/s/2025-South-India-Itinerary.pdf", primary: true },
     ],
@@ -227,7 +227,7 @@ export default function ExcursionsPage() {
                           href={link.href}
                           target={link.href.startsWith("http") ? "_blank" : undefined}
                           rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                          className="inline-flex items-center gap-2 h-11 px-6 lift-btn rounded-[6px] text-[0.76rem] tracking-[0.09em] uppercase font-bold transition-opacity hover:opacity-85 w-fit group"
+                          className="inline-flex items-center gap-2 h-11 px-6 lift-btn rounded-tl-xl rounded-br-xl rounded-tr-[3px] rounded-bl-[3px] text-[0.76rem] tracking-[0.09em] uppercase font-bold transition-opacity hover:opacity-85 w-fit group"
                           style={{ background: "var(--primary)", color: "var(--primary-foreground)" }}
                         >
                           {link.label} <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
@@ -238,7 +238,7 @@ export default function ExcursionsPage() {
                           href={link.href}
                           target={link.href.startsWith("http") ? "_blank" : undefined}
                           rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                          className="inline-flex items-center gap-2 h-11 px-5 text-[0.76rem] tracking-[0.09em] uppercase font-bold transition-opacity hover:opacity-70 w-fit group rounded-[6px]"
+                          className="inline-flex items-center gap-2 h-11 px-5 text-[0.76rem] tracking-[0.09em] uppercase font-bold transition-opacity hover:opacity-70 w-fit group rounded-tl-xl rounded-br-xl rounded-tr-[3px] rounded-bl-[3px]"
                           style={{ color: "var(--primary)", border: "1.5px solid var(--primary)" }}
                         >
                           {link.label} <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
@@ -360,7 +360,7 @@ export default function ExcursionsPage() {
                   href="https://www.youtube.com/@lukeketterhagen"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 h-11 px-6 lift-btn rounded-[6px] text-[0.76rem] tracking-[0.09em] uppercase font-bold transition-opacity hover:opacity-85"
+                  className="inline-flex items-center gap-2.5 h-11 px-6 lift-btn rounded-tl-xl rounded-br-xl rounded-tr-[3px] rounded-bl-[3px] text-[0.76rem] tracking-[0.09em] uppercase font-bold transition-opacity hover:opacity-85"
                   style={{ background: "var(--primary)", color: "var(--primary-foreground)" }}
                 >
                   <Play size={14} />
@@ -373,7 +373,7 @@ export default function ExcursionsPage() {
 
         <ExploreMore
           eyebrow="With Luke"
-          heading="There's More to Explore"
+          heading="There's a Path for Everyone"
           items={[
             {
               num: "01",

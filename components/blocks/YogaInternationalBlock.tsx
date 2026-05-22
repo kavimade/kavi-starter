@@ -19,7 +19,7 @@ const cardStyle = {
 export function YogaInternationalBlock() {
   return (
     <section className="py-28 lg:py-36" style={{ background: "var(--bg-alt)" }}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
 
         {/* Header */}
         <FadeIn>

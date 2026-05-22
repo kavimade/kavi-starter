@@ -64,7 +64,7 @@ export function HeroBlock() {
         {/* Left overlay panel */}
         <div className="relative lg:absolute lg:inset-0 lg:flex lg:items-center lg:justify-start lg:pl-12 xl:pl-20">
           <motion.div
-            className="w-full lg:w-[44%] lg:max-w-[560px] px-8 lg:px-14 py-12 lg:py-16 rounded-sm"
+            className="w-full lg:w-[44%] lg:max-w-[560px] px-8 lg:px-14 py-12 lg:py-16 rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md"
             style={{
               background: "oklch(1 0 0 / 80%)",
               backdropFilter: "blur(12px)",
@@ -143,14 +143,14 @@ export function HeroBlock() {
             >
               <Link
                 href="/retreats"
-                className="inline-flex items-center justify-center h-11 px-6 lift-btn rounded-[6px] text-[0.76rem] tracking-[0.09em] uppercase font-bold transition-opacity hover:opacity-85"
+                className="inline-flex items-center justify-center h-11 px-6 lift-btn rounded-tl-xl rounded-br-xl rounded-tr-[3px] rounded-bl-[3px] text-[0.76rem] tracking-[0.09em] uppercase font-bold transition-opacity hover:opacity-85"
                 style={{ background: "var(--primary)", color: "var(--primary-foreground)" }}
               >
                 Explore Retreats
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center h-11 px-6 lift-btn rounded-[6px] text-[0.76rem] tracking-[0.09em] uppercase font-bold transition-opacity hover:opacity-60"
+                className="inline-flex items-center justify-center h-11 px-6 lift-btn rounded-tl-xl rounded-br-xl rounded-tr-[3px] rounded-bl-[3px] text-[0.76rem] tracking-[0.09em] uppercase font-bold transition-opacity hover:opacity-60"
                 style={{ border: "1px solid var(--border)", color: "var(--foreground)" }}
               >
                 About Luke

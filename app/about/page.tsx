@@ -223,7 +223,7 @@ export default function AboutPage() {
 
         <ExploreMore
           eyebrow="With Luke"
-          heading="There's More to Explore"
+          heading="There's a Path for Everyone"
           items={[
             {
               num: "01",

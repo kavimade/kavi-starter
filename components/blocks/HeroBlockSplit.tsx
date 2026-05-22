@@ -123,7 +123,7 @@ export function HeroBlock() {
           <motion.div variants={item} className="flex flex-wrap gap-3 pt-1">
             <Link
               href="/practice"
-              className="inline-flex items-center justify-center h-11 px-6 rounded-[6px] text-[0.76rem] tracking-[0.09em] uppercase font-medium transition-opacity hover:opacity-85"
+              className="inline-flex items-center justify-center h-11 px-6 rounded-tl-xl rounded-br-xl rounded-tr-[3px] rounded-bl-[3px] text-[0.76rem] tracking-[0.09em] uppercase font-medium transition-opacity hover:opacity-85"
               style={{
                 background: "var(--primary)",
                 color: "var(--primary-foreground)",
@@ -133,7 +133,7 @@ export function HeroBlock() {
             </Link>
             <Link
               href="#retreats"
-              className="inline-flex items-center justify-center h-11 px-6 rounded-[6px] text-[0.76rem] tracking-[0.09em] uppercase font-medium transition-opacity hover:opacity-60"
+              className="inline-flex items-center justify-center h-11 px-6 rounded-tl-xl rounded-br-xl rounded-tr-[3px] rounded-bl-[3px] text-[0.76rem] tracking-[0.09em] uppercase font-medium transition-opacity hover:opacity-60"
               style={{
                 border: "1px solid var(--border)",
                 color: "var(--foreground)",

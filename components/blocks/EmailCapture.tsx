@@ -36,9 +36,9 @@ export function EmailCapture() {
   return (
     <footer>
       {/* ── Email capture — image section ─────────────────── */}
-      <div className="relative py-32 overflow-hidden">
+      <div className="relative min-h-[70svh] flex flex-col overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1920&q=80"
+          src="/luke-ketterhagen-newsletter-signup.webp"
           alt=""
           aria-hidden="true"
           fill
@@ -47,7 +47,7 @@ export function EmailCapture() {
         />
         <div className="absolute inset-0" style={{ background: "var(--overlay-heavy)" }} />
 
-        <div className="relative z-10 max-w-xl mx-auto px-6 lg:px-8 text-center">
+        <div className="relative z-10 flex-1 flex items-center justify-center py-32 max-w-xl mx-auto w-full px-6 lg:px-8 text-center">
         <FadeIn>
           <h2
             className="font-light leading-[1.08] mb-5"
@@ -88,7 +88,7 @@ export function EmailCapture() {
                 placeholder="Your email address"
                 required
                 disabled={status === "loading"}
-                className="flex-1 h-12 px-5 rounded-[6px] text-[1rem] outline-none transition-colors disabled:opacity-60"
+                className="w-full sm:flex-1 h-12 px-5 rounded-[6px] text-[1rem] outline-none transition-colors disabled:opacity-60"
                 style={{
                   background: "color-mix(in oklch, var(--primary-foreground) 10%, transparent)",
                   border: status === "error"
@@ -100,7 +100,7 @@ export function EmailCapture() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="h-12 px-7 lift-btn rounded-[6px] text-[0.68rem] tracking-[0.13em] uppercase font-bold transition-opacity hover:opacity-88 whitespace-nowrap disabled:opacity-60"
+                className="h-12 px-7 lift-btn rounded-tl-xl rounded-br-xl rounded-tr-[3px] rounded-bl-[3px] text-[0.68rem] tracking-[0.13em] uppercase font-bold transition-opacity hover:opacity-88 whitespace-nowrap disabled:opacity-60"
                 style={{ background: "var(--primary-foreground)", color: "var(--foreground)" }}
               >
                 {status === "loading" ? "Subscribing…" : "Subscribe Free"}
@@ -119,26 +119,29 @@ export function EmailCapture() {
           </p>
         </FadeIn>
         </div>
-      </div>
 
-      {/* ── Copyright bar ─────────────────────────────────── */}
-      <div style={{ background: "var(--bg-dark)" }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span
-            className="text-[0.69rem] tracking-[0.22em] uppercase"
-            style={{ color: "var(--primary-foreground)", opacity: 0.4 }}
+        {/* ── Copyright bar — pinned to bottom ─────────────── */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 pb-6">
+          <div
+            className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-2"
+            style={{ borderTop: "1px solid color-mix(in oklch, var(--primary-foreground) 18%, transparent)" }}
           >
-            © {year} Luke Ketterhagen. All rights reserved.
-          </span>
-          <a
-            href="https://seancorey.net"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[0.69rem] tracking-[0.22em] uppercase underline underline-offset-2 transition-opacity hover:opacity-80"
-            style={{ color: "var(--primary-foreground)", opacity: 1 }}
-          >
-            Website by Sean Corey
-          </a>
+            <span
+              className="text-[0.69rem] tracking-[0.22em] uppercase"
+              style={{ color: "var(--primary-foreground)", opacity: 0.38 }}
+            >
+              © {year} Luke Ketterhagen
+            </span>
+            <a
+              href="https://seancorey.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[0.69rem] tracking-[0.22em] uppercase underline underline-offset-2 transition-opacity hover:opacity-80"
+              style={{ color: "var(--primary-foreground)", opacity: 0.55 }}
+            >
+              Website by Sean Corey
+            </a>
+          </div>
         </div>
       </div>
     </footer>

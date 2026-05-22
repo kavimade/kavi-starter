@@ -136,7 +136,7 @@ export function FeaturedOffering() {
               </p>
               <Link
                 href="/retreat"
-                className="inline-flex items-center justify-center gap-2 h-12 px-7 lift-btn rounded-[6px] text-[0.68rem] tracking-[0.13em] uppercase font-medium transition-opacity hover:opacity-85 w-fit group"
+                className="inline-flex items-center justify-center gap-2 h-12 px-7 lift-btn rounded-tl-xl rounded-br-xl rounded-tr-[3px] rounded-bl-[3px] text-[0.68rem] tracking-[0.13em] uppercase font-medium transition-opacity hover:opacity-85 w-fit group"
                 style={{
                   background: "var(--primary)",
                   color: "var(--primary-foreground)",

@@ -32,7 +32,7 @@ const excursions = [
 export function ExcursionsBlock() {
   return (
     <section className="py-28 lg:py-36" style={{ background: "var(--background)" }}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
 
         {/* Header */}
         <FadeIn>

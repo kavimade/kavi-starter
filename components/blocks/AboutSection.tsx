@@ -16,7 +16,7 @@ export function AboutSection() {
                 className="absolute -top-6 -left-6 w-3/4 h-3/4 rounded-full pointer-events-none"
                 style={{ background: "var(--shape-1)" }}
               />
-              <div className="relative aspect-[4/5] rounded-sm overflow-hidden">
+              <div className="relative aspect-[4/5] rounded-tl-3xl rounded-br-3xl rounded-tr-md rounded-bl-md overflow-hidden">
                 <Image
                   src="/luke-ketterhagen-about-photo.webp"
                   alt="Luke Ketterhagen"
