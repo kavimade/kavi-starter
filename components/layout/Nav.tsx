@@ -54,7 +54,7 @@ export function Nav() {
     <>
       {/* ── Sticky header ───────────────────────────────────── */}
       <header
-        className="sticky top-0 z-40 transition-all duration-300"
+        className={`${mobileOpen ? "fixed top-0 left-0 right-0" : "sticky top-0"} z-[65] transition-all duration-300`}
         style={{
           background: onDark ? "transparent" : "var(--background)",
           boxShadow: onDark
@@ -69,7 +69,7 @@ export function Nav() {
 
           {/* Logo — left */}
           <motion.div
-            className="flex-shrink-0 relative z-50 justify-self-start"
+            className="flex-shrink-0 relative z-10 justify-self-start"
             initial={{ opacity: 0, x: -12 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number], delay: 0.1 }}
@@ -91,7 +91,7 @@ export function Nav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[0.8rem] tracking-[0.18em] uppercase font-bold transition-colors"
+                className="text-[0.8rem] tracking-[0.15em] uppercase font-bold transition-colors"
                 style={{
                   color: isActive(link.href) ? "var(--primary)" : "var(--foreground)",
                   opacity: isActive(link.href) ? 1 : 0.75,
@@ -123,7 +123,7 @@ export function Nav() {
 
             {/* Mobile toggle */}
             <motion.button
-              className="md:hidden relative z-50 flex flex-col justify-between cursor-pointer"
+              className="md:hidden relative z-10 flex flex-col justify-between cursor-pointer"
               style={{ width: 26, height: 16 }}
               onClick={() => setMobileOpen((v) => !v)}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
@@ -158,7 +158,7 @@ export function Nav() {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="md:hidden fixed inset-0 z-30 flex flex-col px-8 pb-12"
+            className="md:hidden fixed inset-0 z-[60] flex flex-col px-8 pb-12"
             style={{
               background: "var(--bg-dark)",
               paddingTop: "140px",

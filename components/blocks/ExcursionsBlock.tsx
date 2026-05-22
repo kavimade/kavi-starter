@@ -1,31 +1,28 @@
 import Image from "next/image"
+import Link from "next/link"
 import { FadeIn } from "@/components/ui/fade-in"
 import { ArrowRight } from "lucide-react"
 
 const excursions = [
   {
-    tag: "Registration Open",
-    region: "2026",
-    title: "North India Excursion",
-    year: "2026",
-    description:
-      "A small-group spiritual journey through the sacred landscapes of northern India — ancient temples, Himalayan culture, and a dedicated yoga and Ayurveda retreat. Logistics handled, transformative experience guaranteed.",
-    image:
-      "/luke-ketterhagen-taj-mahal.webp",
-    href: "https://www.lukeketterhagen.com/excursions",
-    cta: "View Itinerary & Register",
+    tag:         "Registration Open",
+    region:      "2026",
+    title:       "North India Excursion",
+    year:        "2026",
+    description: "A small-group spiritual journey through the sacred landscapes of northern India — ancient temples, Himalayan culture, and a dedicated yoga and Ayurveda retreat. Logistics handled, transformative experience guaranteed.",
+    image:       "/luke-ketterhagen-taj-mahal.webp",
+    href:        "/excursions#north-india",
+    cta:         "View Itinerary & Register",
   },
   {
-    tag: "Registration Open",
-    region: "2027",
-    title: "Uganda Excursion",
-    year: "2026",
-    description:
-      "An intimate group journey into the heart of Uganda — wildlife, culture, and community woven together with daily practice. One of the world's most vibrant and welcoming destinations, experienced slowly and intentionally.",
-    image:
-      "/luke-ketterhagen-moka-uganda-excursion.webp",
-    href: "https://www.lukeketterhagen.com/excursions",
-    cta: "View Itinerary & Register",
+    tag:         "Registration Open",
+    region:      "2027",
+    title:       "Uganda Excursion",
+    year:        "2027",
+    description: "An intimate group journey into the heart of Uganda — wildlife, culture, and community woven together with daily practice. One of the world's most vibrant and welcoming destinations, experienced slowly and intentionally.",
+    image:       "/luke-ketterhagen-moka-uganda-excursion.webp",
+    href:        "/excursions#uganda",
+    cta:         "View Itinerary & Register",
   },
 ]
 
@@ -60,10 +57,8 @@ export function ExcursionsBlock() {
         <div className="grid md:grid-cols-2 gap-8">
           {excursions.map((ex, i) => (
             <FadeIn key={ex.title} delay={i * 0.12} direction="up">
-              <a
+              <Link
                 href={ex.href}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="group rounded-sm overflow-hidden flex flex-col lift-card cursor-pointer"
                 style={{
                   background: "var(--card)",
@@ -143,7 +138,7 @@ export function ExcursionsBlock() {
                     <ArrowRight size={12} />
                   </div>
                 </div>
-              </a>
+              </Link>
             </FadeIn>
           ))}
         </div>

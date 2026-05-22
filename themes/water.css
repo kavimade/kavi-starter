@@ -50,7 +50,7 @@
   --shape-2:         oklch(0.58 0.10 70 / 0.10);      /* amber hint blob */
 
   /* ── Typography ─────────────────────────────────────────── */
-  --theme-font-display: var(--font-playfair, 'Playfair Display', Georgia, serif);
-  --theme-font-body:    var(--font-lato, 'Lato', system-ui, sans-serif);
-  --theme-font-script:  var(--font-pinyon, 'Pinyon Script', cursive);
+  --theme-font-display: var(--font-serif-main, Georgia, serif);
+  --theme-font-body:    var(--font-sans-main, system-ui, sans-serif);
+  --theme-font-script:  var(--font-script-main, cursive);
 }

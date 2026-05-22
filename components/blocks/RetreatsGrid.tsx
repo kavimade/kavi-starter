@@ -42,7 +42,7 @@ const retreats = [
 
 export function RetreatsGrid() {
   return (
-    <section className="pt-16 pb-28 lg:pt-20 lg:pb-36" style={{ background: "var(--bg-alt)" }}>
+    <section className="pt-20 pb-28 lg:pt-28 lg:pb-36" style={{ background: "var(--bg-alt)" }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Header */}

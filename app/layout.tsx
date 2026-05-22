@@ -1,32 +1,30 @@
 import type { Metadata } from "next"
 import localFont from "next/font/local"
+import { RelaxationToast } from "@/components/ui/RelaxationToast"
+import { Playfair_Display } from "next/font/google"
 import "./globals.css"
 
-const playfairDisplay = localFont({
-  variable: "--font-playfair",
+// TEMP: testing Playfair Display — swap to next/font/local once confirmed
+const serifMain = Playfair_Display({
+  variable: "--font-serif-main",
+  display: "swap",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+})
+
+const sansMain = localFont({
+  variable: "--font-sans-main",
   display: "swap",
   src: [
-    { path: "../public/fonts/playfair-display-400.woff2",         weight: "400", style: "normal" },
-    { path: "../public/fonts/playfair-display-400-italic.woff2",  weight: "400", style: "italic" },
-    { path: "../public/fonts/playfair-display-500.woff2",         weight: "500", style: "normal" },
-    { path: "../public/fonts/playfair-display-500-italic.woff2",  weight: "500", style: "italic" },
-    { path: "../public/fonts/playfair-display-600.woff2",         weight: "600", style: "normal" },
-    { path: "../public/fonts/playfair-display-700.woff2",         weight: "700", style: "normal" },
+    { path: "../public/fonts/jost-300.woff2", weight: "300", style: "normal" },
+    { path: "../public/fonts/jost-400.woff2", weight: "400", style: "normal" },
+    { path: "../public/fonts/jost-700.woff2", weight: "700", style: "normal" },
   ],
 })
 
-const lato = localFont({
-  variable: "--font-lato",
-  display: "swap",
-  src: [
-    { path: "../public/fonts/lato-300.woff2", weight: "300", style: "normal" },
-    { path: "../public/fonts/lato-400.woff2", weight: "400", style: "normal" },
-    { path: "../public/fonts/lato-700.woff2", weight: "700", style: "normal" },
-  ],
-})
-
-const pinyonScript = localFont({
-  variable: "--font-pinyon",
+const scriptMain = localFont({
+  variable: "--font-script-main",
   display: "swap",
   src: [
     { path: "../public/fonts/pinyon-script-400.woff2", weight: "400", style: "normal" },
@@ -48,10 +46,11 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme="water"
-      className={`${playfairDisplay.variable} ${lato.variable} ${pinyonScript.variable}`}
+      className={`${serifMain.variable} ${sansMain.variable} ${scriptMain.variable}`}
     >
       <body className="min-h-screen flex flex-col">
         <div className="flex flex-col flex-1">{children}</div>
+        <RelaxationToast />
       </body>
     </html>
   )

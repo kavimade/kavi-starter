@@ -2,11 +2,11 @@ import Image from "next/image"
 import { AnnouncementBar } from "@/components/layout/AnnouncementBar"
 import { Nav } from "@/components/layout/Nav"
 import { PageHero } from "@/components/blocks/PageHero"
-import { ExploreMore } from "@/components/blocks/ExploreMore"
+import { ExcursionGallery } from "@/components/blocks/ExcursionGallery"
 import { EmailCapture } from "@/components/blocks/EmailCapture"
 import { ScrollToTop } from "@/components/ui/ScrollToTop"
 import { FadeIn } from "@/components/ui/fade-in"
-import { Check, ArrowRight, Play } from "lucide-react"
+import { Check, ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 
 const excursions = [
   {
+    id:      "north-india",
     year:    "2026",
     status:  "Registration Open",
     region:  "North India",
@@ -38,6 +39,7 @@ const excursions = [
     flip: false,
   },
   {
+    id:      "uganda",
     year:    "2027",
     status:  "Registration Open",
     region:  "East Africa",
@@ -58,6 +60,7 @@ const excursions = [
     flip: true,
   },
   {
+    id:      "south-india",
     year:    "2028",
     status:  "Coming Soon",
     region:  "South India",
@@ -163,7 +166,8 @@ export default function ExcursionsPage() {
         <section className="py-24 lg:py-32" style={{ background: "var(--background)" }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col gap-32 lg:gap-40">
             {excursions.map((ex, i) => (
-              <FadeIn key={ex.title} direction={ex.flip ? "left" : "right"}>
+              <div key={ex.title} id={ex.id} className="scroll-mt-[160px]">
+              <FadeIn direction={ex.flip ? "left" : "right"}>
                 <div className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ${ex.flip ? "lg:[&>*:first-child]:order-2" : ""}`}>
 
                   {/* Image */}
@@ -248,6 +252,7 @@ export default function ExcursionsPage() {
                   </div>
                 </div>
               </FadeIn>
+              </div>
             ))}
           </div>
         </section>
@@ -331,13 +336,13 @@ export default function ExcursionsPage() {
           </div>
         </section>
 
-        {/* Video section */}
-        <section className="py-24" style={{ background: "var(--bg-dark)" }}>
-          <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        {/* Photo gallery */}
+        <section className="py-24 lg:py-32" style={{ background: "var(--bg-dark)" }}>
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <FadeIn>
-              <div className="flex flex-col items-center gap-6">
-                <p className="text-[0.69rem] tracking-[0.22em] uppercase" style={{ color: "var(--warm)" }}>
-                  See It For Yourself
+              <div className="mb-12">
+                <p className="text-[0.69rem] tracking-[0.22em] uppercase mb-3" style={{ color: "var(--warm)" }}>
+                  Past Excursions
                 </p>
                 <h2
                   className="font-normal"
@@ -347,57 +352,47 @@ export default function ExcursionsPage() {
                     color: "var(--primary-foreground)",
                   }}
                 >
-                  Watch Previous Excursions
+                  Moments from The Journey
                 </h2>
-                <p
-                  className="text-[1.05rem] leading-relaxed max-w-xl"
-                  style={{ color: "var(--primary-foreground)", opacity: 0.65 }}
+              </div>
+            </FadeIn>
+
+            <ExcursionGallery />
+          </div>
+        </section>
+
+        {/* Contact CTA */}
+        <section className="py-24" style={{ background: "var(--bg-alt)" }}>
+          <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+            <FadeIn>
+              <div className="flex flex-col items-center gap-5">
+                <p className="text-[0.69rem] tracking-[0.22em] uppercase" style={{ color: "var(--warm)" }}>
+                  Have a Question?
+                </p>
+                <h2
+                  className="font-normal leading-[1.1]"
+                  style={{
+                    fontFamily: "var(--theme-font-display)",
+                    fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
+                    color: "var(--foreground)",
+                  }}
                 >
-                  Luke has documented over 16 videos from past excursions — temple visits,
-                  practice sessions, wildlife encounters, and the moments in between.
+                  I'm happy to help you find the right trip.
+                </h2>
+                <p className="text-[1.05rem] leading-relaxed max-w-md" style={{ color: "var(--fg-muted)" }}>
+                  Not sure which excursion is right for you? Reach out directly and I'll answer any questions you have.
                 </p>
                 <a
-                  href="https://www.youtube.com/@lukeketterhagen"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 h-11 px-6 lift-btn rounded-tl-xl rounded-br-xl rounded-tr-[3px] rounded-bl-[3px] text-[0.76rem] tracking-[0.09em] uppercase font-bold transition-opacity hover:opacity-85"
+                  href="/contact"
+                  className="inline-flex items-center gap-2 h-11 px-6 lift-btn rounded-tl-xl rounded-br-xl rounded-tr-[3px] rounded-bl-[3px] text-[0.76rem] tracking-[0.09em] uppercase font-bold transition-opacity hover:opacity-85"
                   style={{ background: "var(--primary)", color: "var(--primary-foreground)" }}
                 >
-                  <Play size={14} />
-                  Watch on YouTube
+                  Get in Touch <ArrowRight size={14} />
                 </a>
               </div>
             </FadeIn>
           </div>
         </section>
-
-        <ExploreMore
-          eyebrow="With Luke"
-          heading="There's a Path for Everyone"
-          items={[
-            {
-              num: "01",
-              label: "Yoga Retreats",
-              title: "Retreats",
-              description: "Three and a half days of yoga, meditation, and deep rest at the Himalayan Institute in the Pocono Mountains.",
-              href: "/retreats",
-            },
-            {
-              num: "02",
-              label: "Professional Development",
-              title: "Trainings",
-              description: "Yoga teacher training and workshops rooted in the Himalayan tradition.",
-              href: "/trainings",
-            },
-            {
-              num: "03",
-              label: "For Organizations",
-              title: "Corporate Wellness",
-              description: "Yoga, meditation, and stress management brought to your workplace or corporate retreat.",
-              href: "/corporate",
-            },
-          ]}
-        />
 
       </main>
       <EmailCapture />

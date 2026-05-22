@@ -19,7 +19,7 @@ const line = {
 export function HeroBlock() {
   const desktopImgRef = useRef<HTMLDivElement>(null)
   const { scrollY } = useScroll()
-  const objectX = useTransform(scrollY, [0, 1800], [-650, -850], { clamp: true })
+  const objectX = useTransform(scrollY, [0, 1800], [-500, -700], { clamp: true })
 
   useMotionValueEvent(objectX, "change", (x) => {
     const img = desktopImgRef.current?.querySelector("img")
@@ -28,7 +28,7 @@ export function HeroBlock() {
   return (
     <section>
       {/* ── Full-bleed image + left overlay panel ─────────── */}
-      <div className="lg:relative lg:min-h-[100svh]">
+      <div className="lg:relative lg:min-h-[85svh]">
 
         {/* Background image — mobile: fixed height; desktop: absolute fill */}
         <motion.div
@@ -56,7 +56,7 @@ export function HeroBlock() {
               fill
               sizes="100vw"
               className="object-cover hidden lg:block"
-              style={{ objectPosition: "-650px 0px" }}
+              style={{ objectPosition: "-500px 0px" }}
             />
           </div>
         </motion.div>

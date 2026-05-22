@@ -97,9 +97,7 @@ export function AboutSection() {
               </div>
 
               <a
-                href="https://www.lukeketterhagen.com/about-me"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/about"
                 className="inline-flex items-center gap-2 text-[0.68rem] tracking-[0.14em] uppercase font-medium w-fit group transition-all hover:gap-3"
                 style={{ color: "var(--primary)" }}
               >
