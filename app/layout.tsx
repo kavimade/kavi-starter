@@ -35,6 +35,15 @@ const siteUrl = "https://lukeketterhagen.com"
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.png",       sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   title: {
     default:  "Luke Ketterhagen — Yoga, Meditation & Retreats",
     template: "%s — Luke Ketterhagen",
