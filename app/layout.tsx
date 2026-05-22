@@ -2,16 +2,18 @@ import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import localFont from "next/font/local"
 import { RelaxationToast } from "@/components/ui/RelaxationToast"
-import { Playfair_Display } from "next/font/google"
 import "./globals.css"
 
-// TEMP: testing Playfair Display — swap to next/font/local once confirmed
-const serifMain = Playfair_Display({
+const serifMain = localFont({
   variable: "--font-serif-main",
   display: "swap",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  src: [
+    { path: "../public/fonts/playfair-display-400.woff2",        weight: "400", style: "normal" },
+    { path: "../public/fonts/playfair-display-400-italic.woff2", weight: "400", style: "italic" },
+    { path: "../public/fonts/playfair-display-500.woff2",        weight: "500", style: "normal" },
+    { path: "../public/fonts/playfair-display-500-italic.woff2", weight: "500", style: "italic" },
+    { path: "../public/fonts/playfair-display-700.woff2",        weight: "700", style: "normal" },
+  ],
 })
 
 const sansMain = localFont({
