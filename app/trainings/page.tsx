@@ -9,9 +9,10 @@ import { ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Trainings — Luke Ketterhagen",
+  title: "Yoga Teacher Trainings & Workshops",
   description:
-    "Yoga teacher training programs and workshops with Luke Ketterhagen, rooted in the Himalayan tradition.",
+    "200-hour yoga teacher training, workshops, and professional development with Luke Ketterhagen, rooted in the Himalayan tradition.",
+  alternates: { canonical: "/trainings" },
 }
 
 const offerings = [

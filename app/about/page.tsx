@@ -8,9 +8,10 @@ import { FadeIn } from "@/components/ui/fade-in"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "About — Luke Ketterhagen",
+  title: "About Luke Ketterhagen",
   description:
     "Luke Ketterhagen is a yoga teacher, meditation guide, and world traveler with nearly 18 years of practice and teaching in the Himalayan tradition.",
+  alternates: { canonical: "/about" },
 }
 
 const beliefs = [

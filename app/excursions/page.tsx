@@ -10,9 +10,10 @@ import { Check, ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Excursions — Luke Ketterhagen",
+  title: "Spiritual Excursions to India & Uganda",
   description:
     "Small-group spiritual journeys to India and Uganda with Luke Ketterhagen. Cultural immersion, sacred sites, and daily yoga practice.",
+  alternates: { canonical: "/excursions" },
 }
 
 const excursions = [

@@ -8,9 +8,10 @@ import { Mail, Play } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Contact — Luke Ketterhagen",
+  title: "Contact Luke Ketterhagen",
   description:
-    "Get in touch with Luke Ketterhagen about retreats, excursions, trainings, or corporate wellness programs.",
+    "Get in touch with Luke Ketterhagen about yoga retreats, international excursions, teacher trainings, or corporate wellness programs.",
+  alternates: { canonical: "/contact" },
 }
 
 export default function ContactPage() {

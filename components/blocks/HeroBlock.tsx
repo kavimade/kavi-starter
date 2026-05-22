@@ -77,11 +77,11 @@ export function HeroBlock() {
           >
 
             {/* Stacked heading */}
-            <motion.div
+            <motion.h1
               variants={stagger}
               initial="hidden"
               animate="visible"
-              className="mb-6"
+              className="mb-6 font-normal"
             >
               {["Yoga.", "Meditation.", "Natural Health."].map((word, i) => (
                 <motion.span
@@ -99,7 +99,7 @@ export function HeroBlock() {
                   {word}
                 </motion.span>
               ))}
-            </motion.div>
+            </motion.h1>
 
             {/* Subtitle */}
             <motion.p

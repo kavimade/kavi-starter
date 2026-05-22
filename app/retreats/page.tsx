@@ -8,9 +8,10 @@ import { ScrollToTop } from "@/components/ui/ScrollToTop"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Retreats — Luke Ketterhagen",
+  title: "Yoga & Meditation Retreats",
   description:
     "Join Luke Ketterhagen for yoga and meditation retreats at the Himalayan Institute in Honesdale, PA. Three residential retreats per year.",
+  alternates: { canonical: "/retreats" },
 }
 
 export default function RetreatsPage() {

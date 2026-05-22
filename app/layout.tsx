@@ -31,10 +31,58 @@ const scriptMain = localFont({
   ],
 })
 
+const siteUrl = "https://lukeketterhagen.com"
+
 export const metadata: Metadata = {
-  title: "Luke Ketterhagen — Yoga & Meditation",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default:  "Luke Ketterhagen — Yoga, Meditation & Retreats",
+    template: "%s — Luke Ketterhagen",
+  },
   description:
-    "Yoga, meditation, and breathwork in the Himalayan tradition. Retreats, online classes, and excursions with Luke Ketterhagen.",
+    "Yoga, meditation, and breathwork in the Himalayan tradition. Retreats, excursions, and teacher trainings with Luke Ketterhagen.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type:        "website",
+    siteName:    "Luke Ketterhagen",
+    title:       "Luke Ketterhagen — Yoga, Meditation & Retreats",
+    description: "Yoga, meditation, and breathwork in the Himalayan tradition. Retreats, excursions, and teacher trainings with Luke Ketterhagen.",
+    url:         siteUrl,
+    images: [{
+      url:    "/luke-ketterhagen-hero.webp",
+      width:  1920,
+      height: 1080,
+      alt:    "Luke Ketterhagen — Yoga & Meditation",
+    }],
+  },
+  twitter: {
+    card:        "summary_large_image",
+    title:       "Luke Ketterhagen — Yoga, Meditation & Retreats",
+    description: "Yoga, meditation, and breathwork in the Himalayan tradition.",
+    images:      ["/luke-ketterhagen-hero.webp"],
+  },
+}
+
+const personSchema = {
+  "@context":    "https://schema.org",
+  "@type":       "Person",
+  "name":        "Luke Ketterhagen",
+  "jobTitle":    "Yoga Teacher & Meditation Guide",
+  "url":         siteUrl,
+  "image":       `${siteUrl}/luke-ketterhagen-about-photo.webp`,
+  "description": "Yoga teacher and meditation guide with nearly 18 years of experience in the Himalayan tradition. Leads retreats, international excursions, teacher trainings, and corporate wellness programs.",
+  "sameAs": [
+    "https://www.youtube.com/@lukeketterhagen8133",
+    "https://www.lukeketterhagen.com",
+  ],
+  "knowsAbout": ["Yoga", "Meditation", "Himalayan Tradition", "Pranayama", "Breathwork", "Ayurveda", "Corporate Wellness"],
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name":  "Himalayan Institute",
+    "url":   "https://himalayaninstitute.org",
+  },
 }
 
 export default function RootLayout({
@@ -49,6 +97,10 @@ export default function RootLayout({
       className={`${serifMain.variable} ${sansMain.variable} ${scriptMain.variable}`}
     >
       <body className="min-h-screen flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
         <div className="flex flex-col flex-1">{children}</div>
         <RelaxationToast />
       </body>

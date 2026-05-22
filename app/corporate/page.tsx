@@ -8,9 +8,10 @@ import { ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Corporate Wellness — Luke Ketterhagen",
+  title: "Corporate Wellness Programs",
   description:
-    "Yoga, meditation, and stress management programs for organizations. Luke Ketterhagen brings evidence-based wellness directly to your workplace or corporate retreat.",
+    "Yoga, meditation, and stress management for organizations. Luke Ketterhagen brings evidence-based wellness to your workplace or corporate retreat.",
+  alternates: { canonical: "/corporate" },
 }
 
 const services = [
