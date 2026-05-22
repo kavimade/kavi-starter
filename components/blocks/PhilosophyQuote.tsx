@@ -43,7 +43,7 @@ export function PhilosophyQuote() {
           </blockquote>
 
           <cite
-            className="not-italic mt-8 block text-[0.69rem] tracking-[0.22em] uppercase"
+            className="not-italic mt-8 block text-[0.75rem] tracking-[0.22em] uppercase"
             style={{ color: "var(--primary-foreground)", opacity: 0.5 }}
           >
             — Luke Ketterhagen

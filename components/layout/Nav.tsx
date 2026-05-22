@@ -115,7 +115,7 @@ export function Nav() {
               <Link
                 href="/retreats"
                 className="inline-flex items-center justify-center h-9 px-5 lift-btn rounded-tl-xl rounded-br-xl rounded-tr-[3px] rounded-bl-[3px] text-[0.72rem] tracking-[0.18em] uppercase font-bold transition-opacity hover:opacity-85"
-                style={{ background: "var(--primary)", color: "var(--primary-foreground)" }}
+                style={{ background: "var(--warm)", color: "var(--warm-fg)" }}
               >
                 Retreats
               </Link>
@@ -220,7 +220,7 @@ export function Nav() {
                 href="/retreats"
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex items-center h-11 px-6 lift-btn rounded-tl-xl rounded-br-xl rounded-tr-[3px] rounded-bl-[3px] text-[0.76rem] tracking-[0.09em] uppercase font-medium transition-opacity hover:opacity-85"
-                style={{ background: "var(--primary)", color: "var(--primary-foreground)" }}
+                style={{ background: "var(--warm)", color: "var(--warm-fg)" }}
               >
                 Retreats
               </Link>

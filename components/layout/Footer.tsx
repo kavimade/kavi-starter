@@ -18,15 +18,6 @@ export function Footer() {
 
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <span
-              className="text-[3rem] leading-none"
-              style={{
-                fontFamily: "var(--theme-font-script)",
-                color: "var(--primary-foreground)",
-              }}
-            >
-              Luke
-            </span>
             <p
               className="text-sm leading-relaxed italic"
               style={{

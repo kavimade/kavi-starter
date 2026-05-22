@@ -87,18 +87,6 @@ export function AboutSplit() {
                 you exactly where you are.
               </p>
 
-              {/* Signature */}
-              <div className="pt-1">
-                <span
-                  className="text-[3.2rem] leading-none"
-                  style={{
-                    fontFamily: "var(--theme-font-script)",
-                    color: "var(--primary)",
-                  }}
-                >
-                  Luke
-                </span>
-              </div>
 
               <Link
                 href="/about"

@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image"
+import { useId } from "react"
 import { motion } from "framer-motion"
 
 const ease = [0.25, 0.1, 0.25, 1] as [number, number, number, number]
@@ -12,6 +13,7 @@ interface Props {
   subheading?:     string
   objectPosition?: string
   height?:         string
+  mobileHeight?:   string
 }
 
 export function PageHeroCentered({
@@ -22,13 +24,23 @@ export function PageHeroCentered({
   subheading,
   objectPosition = "center",
   height         = "82svh",
+  mobileHeight,
 }: Props) {
+  const uid = useId().replace(/:/g, "")
+
   return (
     <section>
+      {mobileHeight && (
+        <style>{`
+          #phc-${uid} { height: ${mobileHeight}; }
+          @media (min-width: 768px) { #phc-${uid} { height: ${height}; } }
+        `}</style>
+      )}
       {/* Full-width image */}
       <motion.div
+        id={mobileHeight ? `phc-${uid}` : undefined}
         className="relative w-full overflow-hidden"
-        style={{ height }}
+        style={mobileHeight ? undefined : { height }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.0, ease }}
@@ -54,7 +66,7 @@ export function PageHeroCentered({
 
           {eyebrow && (
             <motion.p
-              className="text-[0.69rem] tracking-[0.22em] uppercase"
+              className="text-[0.75rem] tracking-[0.22em] uppercase"
               style={{ color: "var(--warm)" }}
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -68,7 +80,7 @@ export function PageHeroCentered({
             className="leading-[1.0] font-normal"
             style={{
               fontFamily: "var(--theme-font-display)",
-              fontSize: "clamp(2.8rem, 5.5vw, 4.8rem)",
+              fontSize: "clamp(2.4rem, 4.2vw, 3.8rem)",
               color: "var(--foreground)",
             }}
             initial={{ opacity: 0, y: 16 }}

@@ -35,7 +35,7 @@ export function ExcursionsBlock() {
         <FadeIn>
           <div className="text-center mb-14">
             <p
-              className="text-[0.69rem] tracking-[0.22em] uppercase mb-3"
+              className="text-[0.75rem] tracking-[0.22em] uppercase mb-3"
               style={{ color: "var(--warm)" }}
             >
               Small-Group Travel
@@ -86,10 +86,10 @@ export function ExcursionsBlock() {
                       {ex.region}
                     </span>
                     <span
-                      className="px-3 py-1 text-[0.58rem] tracking-[0.15em] uppercase"
+                      className="px-2 py-1 text-[0.58rem] tracking-[0.15em] uppercase"
                       style={{
-                        background: "var(--warm)",
-                        color: "var(--warm-fg)",
+                        background: "var(--primary-muted)",
+                        color: "var(--primary-foreground)",
                       }}
                     >
                       {ex.tag}
@@ -101,7 +101,7 @@ export function ExcursionsBlock() {
                 <div className="p-7 flex flex-col gap-4 flex-1">
                   <div>
                     <p
-                      className="text-[0.69rem] tracking-[0.2em] uppercase mb-1.5"
+                      className="text-[0.75rem] tracking-[0.2em] uppercase mb-1.5"
                       style={{ color: "var(--warm)" }}
                     >
                       {ex.year} Excursion
@@ -131,7 +131,7 @@ export function ExcursionsBlock() {
                   </p>
 
                   <div
-                    className="inline-flex items-center gap-2 self-start text-[0.72rem] tracking-[0.12em] uppercase font-medium"
+                    className="inline-flex items-center gap-2 self-start text-[0.72rem] tracking-[0.12em] uppercase font-bold mt-3"
                     style={{ color: "var(--primary)" }}
                   >
                     {ex.cta}

@@ -36,9 +36,14 @@
   --sand-fg:         oklch(0.200 0.040 60);
 
   /* ── Warm accent — secondary brand color ───────────────── */
-  --warm:            oklch(0.58 0.10 70);             /* deep amber — badges, chips, accents */
+  --warm:            #7C471C;                          /* deep amber — badges, chips, accents */
+  /* --warm:         oklch(0.58 0.10 70); */           /* previous value */
   --warm-fg:         oklch(0.975 0.005 83);           /* light text on warm */
+  --warm-muted:      #AF9177;                          /* muted warm — subtle text accents */
   --warm-light:      oklch(0.88 0.05 70);             /* pale amber tint for bg use */
+
+  /* ── Primary muted — flexible mid-tone accent ──────────── */
+  --primary-muted:   #477295;                          /* muted blue — flexible accent */
 
   /* ── Overlays ───────────────────────────────────────────── */
   --overlay-light:   oklch(0.198 0.048 252 / 0.16);

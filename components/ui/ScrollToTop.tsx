@@ -22,13 +22,25 @@ function scrollToTop() {
 }
 
 export function ScrollToTop() {
-  const [visible, setVisible] = useState(false)
+  const [visible,    setVisible]    = useState(false)
+  const [overFooter, setOverFooter] = useState(false)
 
   useEffect(() => {
-    const handler = () => setVisible(window.scrollY > 400)
+    const handler = () => {
+      setVisible(window.scrollY > 400)
+
+      const footer = document.querySelector("footer")
+      if (footer) {
+        const rect = footer.getBoundingClientRect()
+        setOverFooter(rect.top < window.innerHeight - 60)
+      }
+    }
     window.addEventListener("scroll", handler, { passive: true })
     return () => window.removeEventListener("scroll", handler)
   }, [])
+
+  const color  = overFooter ? "rgba(255,255,255,0.9)" : "var(--bg-dark)"
+  const border = overFooter ? "1.5px solid rgba(255,255,255,0.7)" : `1.5px solid var(--bg-dark)`
 
   return (
     <AnimatePresence>
@@ -42,9 +54,10 @@ export function ScrollToTop() {
             width: 48,
             height: 48,
             borderRadius: "50%",
-            background: "var(--primary)",
-            color: "var(--primary-foreground)",
-            boxShadow: "0 4px 20px color-mix(in oklch, var(--primary) 35%, transparent)",
+            background: "transparent",
+            border,
+            color,
+            transition: "color 0.3s ease, border-color 0.3s ease",
           }}
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}

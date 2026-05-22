@@ -59,12 +59,9 @@ export default function AboutPage() {
           >
             <FadeIn>
               <div className="flex flex-col gap-7 max-w-[440px]">
-                <div className="flex items-center gap-3">
-                  <div className="w-7 h-px flex-shrink-0" style={{ background: "var(--warm)" }} />
-                  <p className="text-[0.69rem] tracking-[0.22em] uppercase" style={{ color: "var(--primary)" }}>
-                    About Luke
-                  </p>
-                </div>
+                <p className="text-[0.75rem] tracking-[0.22em] uppercase" style={{ color: "var(--primary)" }}>
+                  Luke Ketterhagen
+                </p>
 
                 <h1
                   className="font-normal leading-[1.0]"
@@ -77,8 +74,6 @@ export default function AboutPage() {
                   Nearly 18 years<br />
                   <em className="italic" style={{ color: "var(--primary)" }}>of practice</em>
                 </h1>
-
-                <div className="w-10 h-px" style={{ background: "var(--border)" }} />
 
                 <p className="text-[1.05rem] leading-relaxed" style={{ color: "var(--fg-muted)" }}>
                   I've been teaching yoga and meditation since 2007, rooted in the Himalayan
@@ -101,7 +96,7 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto px-6 lg:px-8">
             <FadeIn>
               <div className="flex flex-col gap-8">
-                <p className="text-[0.69rem] tracking-[0.22em] uppercase" style={{ color: "var(--warm)" }}>
+                <p className="text-[0.75rem] tracking-[0.22em] uppercase" style={{ color: "var(--warm)" }}>
                   My Philosophy
                 </p>
                 <blockquote
@@ -132,7 +127,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <FadeIn>
               <div className="mb-14">
-                <p className="text-[0.69rem] tracking-[0.22em] uppercase mb-3" style={{ color: "var(--warm)" }}>
+                <p className="text-[0.75rem] tracking-[0.22em] uppercase mb-3" style={{ color: "var(--warm)" }}>
                   What I Believe
                 </p>
                 <h2
@@ -191,7 +186,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <div className="flex flex-col gap-5">
-                  <p className="text-[0.69rem] tracking-[0.22em] uppercase" style={{ color: "var(--warm)" }}>
+                  <p className="text-[0.75rem] tracking-[0.22em] uppercase" style={{ color: "var(--warm)" }}>
                     Training & Lineage
                   </p>
                   <h2

@@ -89,7 +89,7 @@ export function PageHeroSplit({
             <motion.div variants={item} className="flex items-center gap-3">
               <div className="w-7 h-px flex-shrink-0" style={{ background: "var(--warm)" }} />
               <p
-                className="text-[0.69rem] tracking-[0.22em] uppercase"
+                className="text-[0.75rem] tracking-[0.22em] uppercase"
                 style={{ color: "var(--primary)" }}
               >
                 {eyebrow}

@@ -4,7 +4,8 @@ import { ContactForm } from "@/components/blocks/ContactForm"
 import { EmailCapture } from "@/components/blocks/EmailCapture"
 import { ScrollToTop } from "@/components/ui/ScrollToTop"
 import { FadeIn } from "@/components/ui/fade-in"
-import { Mail, Play } from "lucide-react"
+import Image from "next/image"
+import { Mail } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export default function ContactPage() {
       <Nav />
       <main>
 
-        <section className="py-24 lg:py-32" style={{ background: "var(--background)" }}>
+        <section className="py-24 lg:py-32" style={{ background: "var(--bg-alt)" }}>
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="grid lg:grid-cols-[1fr_1.4fr] gap-16 lg:gap-24 items-start">
 
@@ -29,7 +30,7 @@ export default function ContactPage() {
               <FadeIn direction="right">
                 <div className="flex flex-col gap-8">
                   <div>
-                    <p className="text-[0.69rem] tracking-[0.22em] uppercase mb-4" style={{ color: "var(--warm)" }}>
+                    <p className="text-[0.75rem] tracking-[0.22em] uppercase mb-4" style={{ color: "var(--warm)" }}>
                       Get in Touch
                     </p>
                     <h1
@@ -53,6 +54,22 @@ export default function ContactPage() {
                     organization — reach out and I'll get back to you personally.
                   </p>
 
+                  <div
+                    className="relative w-full overflow-hidden"
+                    style={{
+                      aspectRatio: "4 / 3",
+                      borderRadius: "18px 4px 18px 4px",
+                    }}
+                  >
+                    <Image
+                      src="/luke-ketterhagen-about-photo.webp"
+                      alt="Luke Ketterhagen"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                      className="object-cover object-center"
+                    />
+                  </div>
+
                   <div className="flex flex-col gap-4">
                     <a
                       href="mailto:LukeKetterhagen@gmail.com"
@@ -73,25 +90,6 @@ export default function ContactPage() {
                       </span>
                     </a>
 
-                    <a
-                      href="https://www.youtube.com/@lukeketterhagen"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 group"
-                    >
-                      <div
-                        className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
-                        style={{ background: "var(--bg-alt)" }}
-                      >
-                        <Play size={15} style={{ color: "var(--primary)" }} />
-                      </div>
-                      <span
-                        className="text-[1rem] group-hover:underline underline-offset-4"
-                        style={{ color: "var(--fg-muted)" }}
-                      >
-                        YouTube — excursion videos & more
-                      </span>
-                    </a>
                   </div>
                 </div>
               </FadeIn>
@@ -100,7 +98,7 @@ export default function ContactPage() {
               <FadeIn direction="left" delay={0.1}>
                 <div
                   className="p-8 lg:p-10 rounded-sm"
-                  style={{ background: "var(--bg-alt)", boxShadow: "0 1px 4px var(--shape-2)" }}
+                  style={{ background: "var(--background)", boxShadow: "0 1px 4px var(--shape-2)" }}
                 >
                   <ContactForm />
                 </div>

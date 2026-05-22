@@ -17,19 +17,15 @@ const sansMain = localFont({
   variable: "--font-sans-main",
   display: "swap",
   src: [
-    { path: "../public/fonts/jost-300.woff2", weight: "300", style: "normal" },
-    { path: "../public/fonts/jost-400.woff2", weight: "400", style: "normal" },
-    { path: "../public/fonts/jost-700.woff2", weight: "700", style: "normal" },
+    { path: "../public/fonts/figtree-300.woff2",        weight: "300", style: "normal" },
+    { path: "../public/fonts/figtree-300-italic.woff2", weight: "300", style: "italic" },
+    { path: "../public/fonts/figtree-400.woff2",        weight: "400", style: "normal" },
+    { path: "../public/fonts/figtree-400-italic.woff2", weight: "400", style: "italic" },
+    { path: "../public/fonts/figtree-700.woff2",        weight: "700", style: "normal" },
+    { path: "../public/fonts/figtree-700-italic.woff2", weight: "700", style: "italic" },
   ],
 })
 
-const scriptMain = localFont({
-  variable: "--font-script-main",
-  display: "swap",
-  src: [
-    { path: "../public/fonts/pinyon-script-400.woff2", weight: "400", style: "normal" },
-  ],
-})
 
 const siteUrl = "https://lukeketterhagen.com"
 
@@ -94,7 +90,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme="water"
-      className={`${serifMain.variable} ${sansMain.variable} ${scriptMain.variable}`}
+      className={`${serifMain.variable} ${sansMain.variable}`}
     >
       <body className="min-h-screen flex flex-col">
         <script

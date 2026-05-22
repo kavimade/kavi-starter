@@ -62,7 +62,7 @@ export function YogaInternationalBlock() {
                 />
                 <span
                   className="absolute top-4 left-4 px-3 py-1 text-[0.58rem] tracking-[0.15em] uppercase"
-                  style={{ background: "var(--primary)", color: "var(--primary-foreground)" }}
+                  style={{ background: "var(--primary-muted)", color: "var(--primary-foreground)" }}
                 >
                   On Demand
                 </span>
@@ -71,7 +71,7 @@ export function YogaInternationalBlock() {
               <div className="p-7 flex flex-col gap-4 flex-1">
                 <div>
                   <p
-                    className="text-[0.69rem] tracking-[0.2em] uppercase mb-2"
+                    className="text-[0.75rem] tracking-[0.2em] uppercase mb-2"
                     style={{ color: "var(--warm)" }}
                   >
                     Online Library
@@ -125,7 +125,7 @@ export function YogaInternationalBlock() {
                 />
                 <span
                   className="absolute top-4 left-4 px-3 py-1 text-[0.58rem] tracking-[0.15em] uppercase"
-                  style={{ background: "var(--warm)", color: "var(--warm-fg)" }}
+                  style={{ background: "var(--primary-muted)", color: "var(--primary-foreground)" }}
                 >
                   Featured Course
                 </span>
@@ -144,7 +144,7 @@ export function YogaInternationalBlock() {
               <div className="p-7 flex flex-col gap-4 flex-1">
                 <div>
                   <p
-                    className="text-[0.69rem] tracking-[0.2em] uppercase mb-2"
+                    className="text-[0.75rem] tracking-[0.2em] uppercase mb-2"
                     style={{ color: "var(--warm)" }}
                   >
                     Online Course

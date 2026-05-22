@@ -1,5 +1,5 @@
 import { FadeIn } from "@/components/ui/fade-in"
-import { Star } from "lucide-react"
+import { ReviewCard } from "@/components/ui/ReviewCard"
 
 const testimonials = [
   {
@@ -43,7 +43,7 @@ export function TestimonialsBlock() {
         <FadeIn>
           <div className="text-center mb-16">
             <p
-              className="text-[0.69rem] tracking-[0.22em] uppercase mb-3"
+              className="text-[0.75rem] tracking-[0.22em] uppercase mb-3"
               style={{ color: "var(--warm)" }}
             >
               Student Stories
@@ -65,54 +65,7 @@ export function TestimonialsBlock() {
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <FadeIn key={t.name} delay={i * 0.1} direction="up">
-              <div
-                className="flex flex-col gap-5 p-8 h-full rounded-sm lift-card"
-                style={{
-                  background: "var(--card)",
-                  boxShadow: "0 1px 4px var(--shape-2)",
-                }}
-              >
-                {/* Stars */}
-                <div className="flex gap-1">
-                  {Array.from({ length: 5 }).map((_, j) => (
-                    <Star
-                      key={j}
-                      size={12}
-                      style={{ color: "var(--sand)", fill: "var(--sand)" }}
-                    />
-                  ))}
-                </div>
-
-                {/* Quote */}
-                <blockquote
-                  className="leading-[1.5] flex-1 text-[1.15rem]"
-                  style={{
-                    fontFamily: "var(--theme-font-display)",
-                    color: "var(--foreground)",
-                  }}
-                >
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-
-                {/* Attribution */}
-                <div
-                  className="flex flex-col gap-0.5 pt-4"
-                  style={{ borderTop: "1px solid var(--border)" }}
-                >
-                  <span
-                    className="text-[1rem] font-medium"
-                    style={{ color: "var(--foreground)" }}
-                  >
-                    {t.name}
-                  </span>
-                  <span
-                    className="text-[0.6rem] tracking-[0.12em] uppercase"
-                    style={{ color: "var(--fg-muted)" }}
-                  >
-                    {t.location}
-                  </span>
-                </div>
-              </div>
+              <ReviewCard quote={t.quote} name={t.name} subtitle={t.location} />
             </FadeIn>
           ))}
         </div>

@@ -57,7 +57,7 @@ export default function TrainingsPage() {
             <FadeIn>
               <div className="flex flex-col gap-8">
                 <p
-                  className="text-[0.69rem] tracking-[0.22em] uppercase"
+                  className="text-[0.75rem] tracking-[0.22em] uppercase"
                   style={{ color: "var(--warm)" }}
                 >
                   Why Train
@@ -98,7 +98,7 @@ export default function TrainingsPage() {
             <FadeIn>
               <div className="mb-14">
                 <p
-                  className="text-[0.69rem] tracking-[0.22em] uppercase mb-3"
+                  className="text-[0.75rem] tracking-[0.22em] uppercase mb-3"
                   style={{ color: "var(--warm)" }}
                 >
                   Programs
@@ -147,7 +147,7 @@ export default function TrainingsPage() {
                       {item.description}
                     </p>
                     <p
-                      className="text-[0.69rem] tracking-[0.12em] uppercase"
+                      className="text-[0.75rem] tracking-[0.12em] uppercase"
                       style={{ color: "var(--warm)" }}
                     >
                       {item.location}
@@ -165,7 +165,7 @@ export default function TrainingsPage() {
             <FadeIn>
               <div className="flex flex-col items-center gap-6">
                 <p
-                  className="text-[0.69rem] tracking-[0.22em] uppercase"
+                  className="text-[0.75rem] tracking-[0.22em] uppercase"
                   style={{ color: "var(--warm)" }}
                 >
                   Stay Informed

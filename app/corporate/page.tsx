@@ -5,12 +5,13 @@ import { EmailCapture } from "@/components/blocks/EmailCapture"
 import { ScrollToTop } from "@/components/ui/ScrollToTop"
 import { FadeIn } from "@/components/ui/fade-in"
 import { ArrowRight } from "lucide-react"
+import { ReviewCard } from "@/components/ui/ReviewCard"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Corporate Wellness Programs",
   description:
-    "Yoga, meditation, and stress management for organizations. Luke Ketterhagen brings evidence-based wellness to your workplace or corporate retreat.",
+    "Yoga, meditation, and stress management for organizations. I bring evidence-based wellness practices directly to your workplace or corporate retreat.",
   alternates: { canonical: "/corporate" },
 }
 
@@ -23,7 +24,7 @@ const services = [
   {
     num:         "02",
     title:       "Corporate Retreats",
-    description: "A fully designed off-site wellness experience for your team. Luke leads yoga, meditation, and breathwork sessions woven into a retreat format tailored to your organization's goals.",
+    description: "A fully designed off-site wellness experience for your team. I lead yoga, meditation, and breathwork sessions woven into a retreat format tailored to your organization's goals.",
   },
   {
     num:         "03",
@@ -67,9 +68,10 @@ export default function CorporatePage() {
           imageAlt="Luke Ketterhagen leading a corporate yoga session"
           eyebrow="For Organizations"
           heading="Corporate Wellness"
-          subheading="Yoga, meditation, and stress management brought directly to your workplace or corporate retreat."
+          subheading="I bring yoga, meditation, and evidence-based stress management directly to your workplace or corporate retreat."
           objectPosition="center bottom"
           height="72svh"
+          mobileHeight="40svh"
         />
 
         {/* Intro */}
@@ -78,7 +80,7 @@ export default function CorporatePage() {
             <FadeIn>
               <div className="grid md:grid-cols-2 gap-12 items-start">
                 <div className="flex flex-col gap-4">
-                  <p className="text-[0.69rem] tracking-[0.22em] uppercase" style={{ color: "var(--warm)" }}>
+                  <p className="text-[0.75rem] tracking-[0.22em] uppercase" style={{ color: "var(--warm)" }}>
                     The Case for Wellness
                   </p>
                   <h2
@@ -99,7 +101,7 @@ export default function CorporatePage() {
                     They excel, thrive, and bring a deeper satisfaction to everything they do.
                   </p>
                   <p className="text-[1.05rem] leading-relaxed" style={{ color: "var(--fg-muted)" }}>
-                    Luke's corporate programs use yoga, meditation, and evidence-based stress management
+                    My corporate programs use yoga, meditation, and evidence-based stress management
                     techniques to create measurable improvements in focus, resilience, and team culture.
                     Every program is tailored to your organization — its people, its pace, its goals.
                   </p>
@@ -114,8 +116,8 @@ export default function CorporatePage() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <FadeIn>
               <div className="mb-14">
-                <p className="text-[0.69rem] tracking-[0.22em] uppercase mb-3" style={{ color: "var(--warm)" }}>
-                  What Luke Offers
+                <p className="text-[0.75rem] tracking-[0.22em] uppercase mb-3" style={{ color: "var(--warm)" }}>
+                  What I Offer
                 </p>
                 <h2
                   className="font-normal"
@@ -137,16 +139,6 @@ export default function CorporatePage() {
                     className="flex flex-col gap-4 p-8 h-full rounded-sm"
                     style={{ background: "var(--card)", boxShadow: "0 1px 4px var(--shape-2)" }}
                   >
-                    <span
-                      className="text-[2rem] leading-none font-normal tabular-nums"
-                      style={{
-                        fontFamily: "var(--theme-font-display)",
-                        color: "var(--primary)",
-                        opacity: 0.18,
-                      }}
-                    >
-                      {s.num}
-                    </span>
                     <h3
                       className="font-normal leading-snug"
                       style={{
@@ -173,8 +165,8 @@ export default function CorporatePage() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <FadeIn>
               <div className="text-center mb-14">
-                <p className="text-[0.69rem] tracking-[0.22em] uppercase mb-3" style={{ color: "var(--warm)" }}>
-                  Organizations Luke Has Served
+                <p className="text-[0.75rem] tracking-[0.22em] uppercase mb-3" style={{ color: "var(--warm)" }}>
+                  Organizations I've Served
                 </p>
                 <h2
                   className="font-normal"
@@ -191,21 +183,7 @@ export default function CorporatePage() {
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (
                 <FadeIn key={t.name} delay={i * 0.1} direction="up">
-                  <div
-                    className="flex flex-col gap-5 p-8 h-full rounded-sm lift-card"
-                    style={{ background: "var(--card)", boxShadow: "0 1px 4px var(--shape-2)" }}
-                  >
-                    <blockquote
-                      className="leading-[1.6] flex-1 text-[1.05rem]"
-                      style={{ fontFamily: "var(--theme-font-display)", color: "var(--foreground)" }}
-                    >
-                      &ldquo;{t.quote}&rdquo;
-                    </blockquote>
-                    <div className="flex flex-col gap-0.5 pt-4" style={{ borderTop: "1px solid var(--border)" }}>
-                      <span className="text-[1rem] font-medium" style={{ color: "var(--foreground)" }}>{t.name}</span>
-                      <span className="text-[0.69rem] tracking-[0.12em] uppercase" style={{ color: "var(--warm)" }}>{t.role}</span>
-                    </div>
-                  </div>
+                  <ReviewCard quote={t.quote} name={t.name} subtitle={t.role} />
                 </FadeIn>
               ))}
             </div>
@@ -217,8 +195,8 @@ export default function CorporatePage() {
           <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
             <FadeIn>
               <div className="flex flex-col items-center gap-6">
-                <p className="text-[0.69rem] tracking-[0.22em] uppercase" style={{ color: "var(--warm)" }}>
-                  Bring Luke to Your Organization
+                <p className="text-[0.75rem] tracking-[0.22em] uppercase" style={{ color: "var(--warm)" }}>
+                  Bring Wellness to Your Organization
                 </p>
                 <h2
                   className="font-normal leading-[1.1]"
@@ -235,7 +213,7 @@ export default function CorporatePage() {
                   style={{ color: "var(--primary-foreground)", opacity: 0.65 }}
                 >
                   Every program is customized. Reach out to discuss your organization's needs,
-                  schedule, and goals — and Luke will design something that fits.
+                  schedule, and goals — and I'll design something that fits.
                 </p>
                 <a
                   href="/contact"

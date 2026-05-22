@@ -42,7 +42,7 @@ export function HeroBlock() {
 
           {/* Eyebrow */}
           <motion.p
-            className="text-[0.69rem] tracking-[0.22em] uppercase"
+            className="text-[0.75rem] tracking-[0.22em] uppercase"
             style={{ color: "var(--primary)" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

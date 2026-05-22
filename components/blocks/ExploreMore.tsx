@@ -29,8 +29,8 @@ export function ExploreMore({
         <FadeIn>
           <div className="mb-14">
             <p
-              className="text-[0.69rem] tracking-[0.22em] uppercase mb-3"
-              style={{ color: "var(--warm)" }}
+              className="text-[0.75rem] tracking-[0.22em] uppercase mb-3"
+              style={{ color: "var(--warm-muted)" }}
             >
               {eyebrow}
             </p>
@@ -63,16 +63,6 @@ export function ExploreMore({
                     style={{ color: "var(--warm)" }}
                   >
                     {item.label}
-                  </span>
-                  <span
-                    className="text-[2rem] leading-none font-normal tabular-nums"
-                    style={{
-                      fontFamily: "var(--theme-font-display)",
-                      color: "var(--primary)",
-                      opacity: 0.18,
-                    }}
-                  >
-                    {item.num}
                   </span>
                 </div>
 

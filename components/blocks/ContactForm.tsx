@@ -42,7 +42,7 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       <div className="grid sm:grid-cols-2 gap-4">
         <div className="flex flex-col gap-1.5">
-          <label className="text-[0.69rem] tracking-[0.15em] uppercase font-bold" style={{ color: "var(--fg-muted)" }}>
+          <label className="text-[0.75rem] tracking-[0.15em] uppercase font-bold" style={{ color: "var(--fg-muted)" }}>
             Name
           </label>
           <input
@@ -60,7 +60,7 @@ export function ContactForm() {
           />
         </div>
         <div className="flex flex-col gap-1.5">
-          <label className="text-[0.69rem] tracking-[0.15em] uppercase font-bold" style={{ color: "var(--fg-muted)" }}>
+          <label className="text-[0.75rem] tracking-[0.15em] uppercase font-bold" style={{ color: "var(--fg-muted)" }}>
             Email
           </label>
           <input
@@ -80,7 +80,7 @@ export function ContactForm() {
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label className="text-[0.69rem] tracking-[0.15em] uppercase font-bold" style={{ color: "var(--fg-muted)" }}>
+        <label className="text-[0.75rem] tracking-[0.15em] uppercase font-bold" style={{ color: "var(--fg-muted)" }}>
           Message
         </label>
         <textarea

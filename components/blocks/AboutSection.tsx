@@ -36,7 +36,7 @@ export function AboutSection() {
           <FadeIn direction="left" delay={0.14}>
             <div className="flex flex-col gap-6">
               <p
-                className="text-[0.69rem] tracking-[0.22em] uppercase"
+                className="text-[0.75rem] tracking-[0.22em] uppercase"
                 style={{ color: "var(--warm)" }}
               >
                 Luke Ketterhagen
@@ -84,17 +84,6 @@ export function AboutSection() {
                 exactly that.
               </p>
 
-              <div className="pt-1">
-                <span
-                  className="text-[3.2rem] leading-none"
-                  style={{
-                    fontFamily: "var(--theme-font-script)",
-                    color: "var(--primary)",
-                  }}
-                >
-                  Luke
-                </span>
-              </div>
 
               <a
                 href="/about"

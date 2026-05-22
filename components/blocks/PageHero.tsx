@@ -51,7 +51,7 @@ export function PageHero({
             <div className="flex flex-col gap-3 max-w-2xl">
               {eyebrow && (
                 <p
-                  className="text-[0.69rem] tracking-[0.22em] uppercase"
+                  className="text-[0.75rem] tracking-[0.22em] uppercase"
                   style={{ color: "var(--warm)" }}
                 >
                   {eyebrow}

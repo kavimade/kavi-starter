@@ -7,6 +7,7 @@ import { EmailCapture } from "@/components/blocks/EmailCapture"
 import { ScrollToTop } from "@/components/ui/ScrollToTop"
 import { FadeIn } from "@/components/ui/fade-in"
 import { Check, ArrowRight } from "lucide-react"
+import { ReviewCard } from "@/components/ui/ReviewCard"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -132,7 +133,7 @@ export default function ExcursionsPage() {
             <FadeIn>
               <div className="grid md:grid-cols-2 gap-12 items-start">
                 <div className="flex flex-col gap-4">
-                  <p className="text-[0.69rem] tracking-[0.22em] uppercase" style={{ color: "var(--warm)" }}>
+                  <p className="text-[0.75rem] tracking-[0.22em] uppercase" style={{ color: "var(--warm)" }}>
                     The Approach
                   </p>
                   <h2
@@ -182,10 +183,10 @@ export default function ExcursionsPage() {
                     />
                     {/* Status badge */}
                     <div
-                      className="absolute top-4 left-4 px-2.5 py-1 text-[0.69rem] tracking-[0.15em] uppercase font-bold"
+                      className="absolute top-4 left-4 px-2 py-1 text-[0.58rem] tracking-[0.15em] uppercase"
                       style={{
-                        background: "var(--warm)",
-                        color: "var(--warm-fg)",
+                        background: "var(--primary-muted)",
+                        color: "var(--primary-foreground)",
                       }}
                     >
                       {ex.status}
@@ -195,7 +196,7 @@ export default function ExcursionsPage() {
                   {/* Content */}
                   <div className="flex flex-col gap-6">
                     <div>
-                      <p className="text-[0.69rem] tracking-[0.22em] uppercase mb-2" style={{ color: "var(--warm)" }}>
+                      <p className="text-[0.75rem] tracking-[0.22em] uppercase mb-2" style={{ color: "var(--warm)" }}>
                         {ex.year} · {ex.region}
                       </p>
                       <h2
@@ -264,7 +265,7 @@ export default function ExcursionsPage() {
             <FadeIn>
               <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
                 <div>
-                  <p className="text-[0.69rem] tracking-[0.22em] uppercase mb-4" style={{ color: "var(--warm)" }}>
+                  <p className="text-[0.75rem] tracking-[0.22em] uppercase mb-4" style={{ color: "var(--warm)" }}>
                     Every Excursion
                   </p>
                   <h2
@@ -298,7 +299,7 @@ export default function ExcursionsPage() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <FadeIn>
               <div className="text-center mb-14">
-                <p className="text-[0.69rem] tracking-[0.22em] uppercase mb-3" style={{ color: "var(--warm)" }}>
+                <p className="text-[0.75rem] tracking-[0.22em] uppercase mb-3" style={{ color: "var(--warm)" }}>
                   Past Travelers
                 </p>
                 <h2
@@ -316,21 +317,7 @@ export default function ExcursionsPage() {
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (
                 <FadeIn key={t.name} delay={i * 0.1} direction="up">
-                  <div
-                    className="flex flex-col gap-5 p-8 h-full rounded-sm lift-card"
-                    style={{ background: "var(--card)", boxShadow: "0 1px 4px var(--shape-2)" }}
-                  >
-                    <blockquote
-                      className="leading-[1.6] flex-1 text-[1.05rem]"
-                      style={{ fontFamily: "var(--theme-font-display)", color: "var(--foreground)" }}
-                    >
-                      &ldquo;{t.quote}&rdquo;
-                    </blockquote>
-                    <div className="flex flex-col gap-0.5 pt-4" style={{ borderTop: "1px solid var(--border)" }}>
-                      <span className="text-[1rem] font-medium" style={{ color: "var(--foreground)" }}>{t.name}</span>
-                      <span className="text-[0.69rem] tracking-[0.12em] uppercase" style={{ color: "var(--warm)" }}>{t.trip}</span>
-                    </div>
-                  </div>
+                  <ReviewCard quote={t.quote} name={t.name} subtitle={t.trip} />
                 </FadeIn>
               ))}
             </div>
@@ -342,7 +329,7 @@ export default function ExcursionsPage() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <FadeIn>
               <div className="mb-12">
-                <p className="text-[0.69rem] tracking-[0.22em] uppercase mb-3" style={{ color: "var(--warm)" }}>
+                <p className="text-[0.75rem] tracking-[0.22em] uppercase mb-3" style={{ color: "var(--warm-muted)" }}>
                   Past Excursions
                 </p>
                 <h2
@@ -367,7 +354,7 @@ export default function ExcursionsPage() {
           <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
             <FadeIn>
               <div className="flex flex-col items-center gap-5">
-                <p className="text-[0.69rem] tracking-[0.22em] uppercase" style={{ color: "var(--warm)" }}>
+                <p className="text-[0.75rem] tracking-[0.22em] uppercase" style={{ color: "var(--warm)" }}>
                   Have a Question?
                 </p>
                 <h2

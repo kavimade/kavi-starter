@@ -25,7 +25,7 @@ export function TrustBar() {
                   {stat.value}
                 </span>
                 <span
-                  className="text-[0.69rem] tracking-[0.18em] uppercase"
+                  className="text-[0.75rem] tracking-[0.18em] uppercase"
                   style={{ color: "var(--fg-muted)" }}
                 >
                   {stat.label}

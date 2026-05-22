@@ -46,7 +46,7 @@ export function JournalPreview() {
           <div className="flex items-end justify-between mb-14 flex-wrap gap-4">
             <div>
               <p
-                className="text-[0.69rem] tracking-[0.22em] uppercase mb-3"
+                className="text-[0.75rem] tracking-[0.22em] uppercase mb-3"
                 style={{ color: "var(--primary)" }}
               >
                 Thoughts &amp; Practice

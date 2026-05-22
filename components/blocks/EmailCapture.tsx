@@ -159,7 +159,7 @@ export function EmailCapture() {
           </div>
 
           {/* Text */}
-          <div className="flex flex-col gap-0.5">
+          <div className="flex flex-col gap-0">
             <span style={{ fontSize: "0.82rem", fontWeight: 500, color: "#E8DFC8", letterSpacing: "0.04em" }}>
               Made by Kavi
             </span>

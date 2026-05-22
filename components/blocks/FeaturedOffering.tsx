@@ -19,7 +19,7 @@ export function FeaturedOffering() {
         <FadeIn>
           <div className="text-center mb-14">
             <p
-              className="text-[0.69rem] tracking-[0.22em] uppercase mb-3"
+              className="text-[0.75rem] tracking-[0.22em] uppercase mb-3"
               style={{ color: "var(--primary)" }}
             >
               Featured Experience
@@ -78,7 +78,7 @@ export function FeaturedOffering() {
           <FadeIn direction="left" delay={0.14} className="p-10 lg:p-14 flex flex-col justify-center gap-6">
             <div>
               <p
-                className="text-[0.69rem] tracking-[0.2em] uppercase mb-3"
+                className="text-[0.75rem] tracking-[0.2em] uppercase mb-3"
                 style={{ color: "var(--primary)" }}
               >
                 Himalayan Institute · Honesdale, PA
@@ -129,7 +129,7 @@ export function FeaturedOffering() {
             {/* Price + CTA */}
             <div className="flex flex-col gap-4 pt-2">
               <p
-                className="text-[0.69rem] tracking-[0.1em] uppercase"
+                className="text-[0.75rem] tracking-[0.1em] uppercase"
                 style={{ color: "var(--fg-muted)" }}
               >
                 Registration open · Himalayan Institute campus

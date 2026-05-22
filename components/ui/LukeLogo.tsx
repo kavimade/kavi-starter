@@ -26,7 +26,7 @@ export function LukeLogo({ onDark = false }: Props) {
       {/* Wordmark */}
       <div className="flex flex-col leading-none gap-[5px]">
         <span
-          className="text-[0.95rem] tracking-[0.2em] uppercase font-bold"
+          className="text-[0.95rem] tracking-[0.15em] uppercase font-bold"
           style={{
             color: onDark ? "var(--primary-foreground)" : "var(--foreground)",
           }}

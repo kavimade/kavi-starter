@@ -49,7 +49,7 @@ export function RetreatsGrid() {
         <FadeIn>
           <div className="text-center mb-16">
             <p
-              className="text-[0.69rem] tracking-[0.22em] uppercase mb-3"
+              className="text-[0.75rem] tracking-[0.22em] uppercase mb-3"
               style={{ color: "var(--warm)" }}
             >
               Himalayan Institute · Honesdale, PA
@@ -96,7 +96,7 @@ export function RetreatsGrid() {
                     style={{ background: "var(--card)" }}
                   >
                     <span
-                      className="text-[0.55rem] tracking-[0.2em] uppercase font-semibold leading-none"
+                      className="text-[0.68rem] tracking-[0.2em] uppercase font-semibold leading-none"
                       style={{ color: "var(--primary)" }}
                     >
                       {retreat.month}
