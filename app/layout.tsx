@@ -8,11 +8,8 @@ const serifMain = localFont({
   variable: "--font-serif-main",
   display: "swap",
   src: [
-    { path: "../public/fonts/playfair-display-400.woff2",        weight: "400", style: "normal" },
-    { path: "../public/fonts/playfair-display-400-italic.woff2", weight: "400", style: "italic" },
-    { path: "../public/fonts/playfair-display-500.woff2",        weight: "500", style: "normal" },
-    { path: "../public/fonts/playfair-display-500-italic.woff2", weight: "500", style: "italic" },
-    { path: "../public/fonts/playfair-display-700.woff2",        weight: "700", style: "normal" },
+    { path: "../public/fonts/playfair-display-variable.woff2",        weight: "400 700", style: "normal" },
+    { path: "../public/fonts/playfair-display-variable-italic.woff2", weight: "400 700", style: "italic" },
   ],
 })
 
