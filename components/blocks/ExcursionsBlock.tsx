@@ -15,14 +15,14 @@ const excursions = [
     cta:         "View Itinerary & Register",
   },
   {
-    tag:         "Registration Open",
-    region:      "2027",
-    title:       "Uganda Excursion",
-    year:        "2027",
-    description: "An intimate group journey into the heart of Uganda — wildlife, culture, and community woven together with daily practice. One of the world's most vibrant and welcoming destinations, experienced slowly and intentionally.",
-    image:       "/luke-ketterhagen-moka-uganda-excursion.webp",
-    href:        "/excursions#uganda",
-    cta:         "View Itinerary & Register",
+    tag:         "Coming Soon",
+    region:      "2028",
+    title:       "South India Excursion",
+    year:        "2028",
+    description: "Cultural charm, spiritual richness, and historical significance across the southern tip of India. Tamil Nadu temples, Kerala backwaters, tea plantations, and a 5-day Ayurvedic spa retreat.",
+    image:       "/luke-ketterhagen-excursion-south-india.webp",
+    href:        "/excursions#south-india",
+    cta:         "Learn More",
   },
 ]
 

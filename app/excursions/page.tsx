@@ -11,9 +11,9 @@ import { ReviewCard } from "@/components/ui/ReviewCard"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Spiritual Excursions to India & Uganda",
+  title: "Spiritual Excursions to India",
   description:
-    "Small-group spiritual journeys to India and Uganda with Luke Ketterhagen. Cultural immersion, sacred sites, and daily yoga practice.",
+    "Small-group spiritual journeys to India with Luke Ketterhagen. Cultural immersion, sacred sites, and daily yoga practice.",
   alternates: { canonical: "/excursions" },
 }
 
@@ -40,6 +40,7 @@ const excursions = [
     ],
     flip: false,
   },
+  /* Uganda 2027 — canceled, restore when rescheduled
   {
     id:      "uganda",
     year:    "2027",
@@ -61,6 +62,7 @@ const excursions = [
     ],
     flip: true,
   },
+  */
   {
     id:      "south-india",
     year:    "2028",
