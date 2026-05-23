@@ -35,7 +35,7 @@ const excursions = [
     ],
     image: "/luke-ketterhagen-taj-mahal.webp",
     links: [
-      { label: "Full Itinerary", href: "https://www.lukeketterhagen.com/s/2026-North-India-Excursion-Itinerary.pdf", primary: false },
+      { label: "Full Itinerary", href: "/2026+North+India+Excursion+Itinerary.pdf", primary: false },
       { label: "Register Now",   href: "https://clients.mindbodyonline.com/classic/ws?studioid=5728520&stype=-8&sTG=40&sVT=223&sView=day&sLoc=0&date=11/06/26", primary: true },
     ],
     flip: false,
@@ -80,7 +80,7 @@ const excursions = [
     ],
     image: "/luke-ketterhagen-excursion-south-india.webp",
     links: [
-      { label: "Full Itinerary", href: "https://www.lukeketterhagen.com/s/2025-South-India-Itinerary.pdf", primary: true },
+      { label: "Full Itinerary", href: "/2025+South+India+Itinerary.pdf", primary: true },
     ],
     flip: false,
   },
